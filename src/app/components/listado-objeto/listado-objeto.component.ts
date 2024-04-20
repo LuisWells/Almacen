@@ -7,7 +7,7 @@ import { Producto } from 'src/app/interfaces/producto';
 const listaProducto: Producto[] = [
   { nombre: 'Cincel', marca: 'Rey', distribuidor: 'Pertas', color: 'Verde'},
   { nombre: 'Cajas', marca: 'Canso', distribuidor: 'Marley', color: 'Mostaza' },
-  { nombre: 'Tubos PVC', marca: 'Pavco', distribuidor: 'Distribuidores SMP', color: 'Gris' },
+  { nombre: 'Tubos', marca: 'Pavco', distribuidor: 'SMP', color: 'Gris' },
   { nombre: 'Clavos', marca: 'Forte', distribuidor: 'Perchas', color: 'Metalico' },
   { nombre: 'Gabinetes', marca: 'Forton', distribuidor: 'Sodimac', color: 'Rojo' },
   { nombre: 'Cuerdas', marca: 'Pilot', distribuidor: 'Promart', color: 'Azul' },
