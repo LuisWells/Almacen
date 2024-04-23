@@ -18,15 +18,15 @@ import { VerObjetoComponent } from './components/ver-objeto/ver-objeto.component
     AppComponent,
     AgregarEditarObjetoComponent,
     ListadoObjetoComponent,
-    VerObjetoComponent
+    VerObjetoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

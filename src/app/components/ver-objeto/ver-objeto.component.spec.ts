@@ -8,9 +8,9 @@ describe('VerObjetoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VerObjetoComponent ]
+      declarations: [VerObjetoComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(VerObjetoComponent);
     component = fixture.componentInstance;

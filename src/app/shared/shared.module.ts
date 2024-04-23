@@ -10,11 +10,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { ReactiveFormsModule } from '@angular/forms';
+
+// Componentes
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [SpinnerComponent],
   imports: [
     CommonModule,
     MatSlideToggleModule,
@@ -26,7 +33,12 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatTooltipModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule,
+    MatProgressBarModule,
+    MatGridListModule,
+    MatGridListModule,
+    ReactiveFormsModule,
   ],
   exports: [
     CommonModule,
@@ -39,7 +51,12 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatTooltipModule,
     MatButtonModule,
-    MatCardModule
-  ]
+    MatCardModule,
+    MatSnackBarModule,
+    MatProgressBarModule,
+    SpinnerComponent,
+    MatGridListModule,
+    ReactiveFormsModule,
+  ],
 })
-export class SharedModule {  }
+export class SharedModule {}
