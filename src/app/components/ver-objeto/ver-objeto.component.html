@@ -1,16 +1,20 @@
 <div class="title">
     <h1>Ver Producto</h1>
 </div>
-<div class="container">
+<!-- <div *ngIf="producto$ | async as producto" class="container"> --PIPE SYNC -->
+<app-spinner *ngIf="loading"></app-spinner>
+<div *ngIf="producto != null" class="container">
     <mat-card class="card">
-        <mat-card-title>Lejia</mat-card-title>
+        <mat-card-title> {{ producto.nombre }} </mat-card-title>
         <mat-card-content>
-            <p><strong>Marca:</strong> Sapolio </p>
-            <p><strong>Distribuidor:</strong> Sara Express </p>
-            <p><strong>Color:</strong> Blanco </p>
+            <p><strong>Marca:</strong> {{ producto.marca }} </p>
+            <p><strong>Distribuidor:</strong> {{ producto.distribuidor }} </p>
+            <p><strong>Color:</strong> {{ producto.color }} </p>
+            <p><strong>Cantidad:</strong> {{ producto.cantidad }} </p>
         </mat-card-content>
         <mat-card-actions>
             <button [routerLink]='["/listarProducto"]' mat-raised-button>Volver</button>
         </mat-card-actions>
+<!--         <button [routerLink]='["/verProducto/6"]' mat-raised-button>Cambiar ID</button> -->
     </mat-card>
 </div>

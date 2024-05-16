@@ -17,6 +17,7 @@ export class ListadoObjetoComponent implements OnInit, AfterViewInit {
     'marca',
     'distribuidor',
     'color',
+    'cantidad',
     'acciones',
   ];
   dataSource = new MatTableDataSource<Producto>();
@@ -61,15 +62,20 @@ export class ListadoObjetoComponent implements OnInit, AfterViewInit {
     );
   }
 
-  eliminarProducto() {
+  eliminarProducto(id: number) {
     this.loading = true;
 
-    setTimeout(() => {
+    this._productoService.deleteProducto(id).subscribe(() => {
+      this.mensajeExito();
       this.loading = false;
-      this._snackBar.open('El Producto fue eliminado con exito', '', {
-        duration: 4000,
-        horizontalPosition: 'right',
-      });
-    }, 3000);
+      this.obtenerProductos();
+    });
+  }
+
+  mensajeExito() {
+    this._snackBar.open('El Producto fue eliminado con exito', '', {
+      duration: 4000,
+      horizontalPosition: 'right',
+    });
   }
 }
